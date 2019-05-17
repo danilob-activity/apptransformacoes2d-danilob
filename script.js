@@ -1,4 +1,4 @@
-const canvas = document.getElementById("canvas");
+const canvas = document.getElementById("canvas2");
 const ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var code = textarea.value;

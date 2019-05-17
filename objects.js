@@ -11,7 +11,7 @@ function Box(center = [0, 0, 1], height = 50, width = 50) {
     this.S = identity(); //matriz 3x3 de escala
     this.fill = white; //cor de preenchimento -> aceita cor hex, ex.: this.fill = "#4592af"
     this.stroke = black; //cor da borda -> aceita cor hex, ex.: this.stroke = "#a34a28"
-    this.name = "";
+    this.name = "Box";
 }
 
 
@@ -24,10 +24,14 @@ Box.prototype.setTranslate = function(x, y) {
 }
 
 //TODO: Aplicar matriz de rotação
-Box.prototype.setRotate = function(theta) {}
+Box.prototype.setRotate = function(theta) {
+    this.R = rotate(theta);
+}
 
 //TODO: Aplicar matriz de escala
-Box.prototype.setScale = function(x, y) {}
+Box.prototype.setScale = function(x, y) {
+    this.S = scale(x, y);
+}
 
 Box.prototype.draw = function(canvas = ctx) { //requer o contexto de desenho
     //pega matriz de tranformação de coordenadas canônicas para coordenadas do canvas
